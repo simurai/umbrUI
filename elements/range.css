@@ -1,0 +1,84 @@
+
+/* 
+ * umbrUI range slider by @simurai
+ */
+
+
+/* -------------- Range Slider -------------- */
+
+input[type="range"] {
+	-webkit-appearance:	none;	/* Remove Safari default */
+	outline: none;
+	width: 250px;
+	height: 5px;
+	border-radius: 1px;
+	position: relative;
+
+	
+	background-color: #000;
+	
+	-webkit-background-clip: padding-box;
+	border: 0;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	cursor: ew-resize;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance:	none;	/* Remove Safari default */
+	position: relative;
+	z-index: 		1;
+
+	width: 26px;
+	height: 40px;
+	border-radius: 3px / 6px ;
+	
+	background-image: -webkit-gradient( linear, left top, right top,
+		color-stop( 0, 		hsl(0,0%,15%) ), 
+		color-stop( .16, 	hsl(0,0%,22%) ), 
+		color-stop( .18, 	hsl(0,0%,30%) ), 
+		color-stop( .2, 	hsl(0,0%,26%) ), 
+		
+		color-stop( .42,	hsl(200,60%,30%) ), 
+		color-stop( .44,	hsl(200,0%,15%) ), 
+		color-stop( .46,	hsl(200,100%,50%) ), 
+		color-stop( .54,	hsl(200,100%,50%) ), 
+		color-stop( .56,	hsl(200,0%,15%) ), 
+		color-stop( .58,	hsl(200,60%,30%) ), 
+		
+		color-stop( .8,		hsl(0,0%,26%) ), 
+		color-stop( .82,	hsl(0,0%,30%) ), 
+		color-stop( .84,	hsl(0,0%,22%) ), 
+		color-stop( 1, 		hsl(0,0%,15%) ) 
+	);
+	
+	-webkit-box-shadow: 
+		
+		inset hsla(0,0%,100%,.15) 0 1px 0px,
+		
+		hsl(0,0%,17%) 0 2px 0px,
+		hsl(0,0%,15%) 0 4px 0px,
+		hsl(0,0%,13%) 0 6px 0px,
+		
+		rgba(0,0,0,.5) 0 8px 5px;
+	
+	-webkit-transform: translateY(-3px);
+	-webkit-box-reflect: 	below 0px -webkit-gradient(linear, left top, left bottom, 
+							from(transparent), color-stop(0.6, transparent), to( rgba(255,255,255,0.15) ));
+}
+
+input[type="range"]:hover {
+	
+	background-image: -webkit-gradient( linear, left top, right top,
+		color-stop( 0, 		hsl(200,80%,45%) ), 
+		color-stop( .08, 	hsl(200,80%,15%) ), 
+		color-stop( .5, 	hsl(200,80%,0%) ), 
+		color-stop( .92,	hsl(200,80%,15%) ), 
+		color-stop( 1, 		hsl(200,80%,45%) ) 
+	);
+	
+	-webkit-box-shadow: inset #000 1px 1px 1px, inset #000 -1px -1px 1px;
+
+}
+
+
+

@@ -1,0 +1,46 @@
+
+/* 
+ * umbrUI progress input by @simurai
+ */
+
+
+
+/* -------------- progress -------------- */
+
+progress {
+	-webkit-appearance: none;
+	position: relative;
+	width: 150px;
+	height: 17px;
+	border-radius: 5px; 	
+	padding: 4px;   
+    background: #000;
+	-webkit-box-shadow: 0 1px 0 hsla(0,0%,100%,.1);
+    
+    /*Disabled for now.
+    -webkit-box-reflect: below -3px -webkit-radial-gradient( 50% 70%, 50% 25%, hsla(0,0%,0%,.2) 0%, hsla(0,0%,0%,0) 95% );*/
+    }
+
+
+progress::-webkit-progress-bar {
+    background-color: hsl(200,10%,14%);
+    background-size: 2px 5px;
+    background-image: 	-webkit-linear-gradient( 0deg,  hsla(0,0%,0%,.4) 1px, hsla(0,0%,0%,0) 1px ),
+    		            -webkit-linear-gradient( 90deg, hsla(0,0%,0%,1) 1px, hsla(0,0%,0%,0) 1px );	
+    }
+
+
+progress::-webkit-progress-value {
+    background-size: inherit;
+    background-image: 	inherit;
+    background-color: hsl(200,100%,50%);
+    -webkit-box-shadow: 0 0 10px 2px hsla(200,100%,50%,.4);
+    -webkit-transition: width 1s cubic-bezier(.20, .10, .20, 1);
+    }
+
+
+progress:hover::-webkit-progress-value {
+	/*In the real world, just change the element's value, this is just a hack for this demo.*/
+	width: 100% !important;
+	-webkit-transition: width .3s cubic-bezier(.20, .10, .20, 1);
+    }

@@ -1,0 +1,149 @@
+
+/* 
+ * umbrUI radio buttons by @simurai
+ */
+
+
+
+/* ----------- radio */
+
+input[type="radio"] {
+	-webkit-appearance:none;	/* Remove Safari default */
+	outline: none;
+	width: 68px;
+	height: 80px;
+	
+	position: relative;
+	display: inline-block;
+	margin: 3px;
+	border-radius: 6px;
+	
+	background-color: #000;
+	
+	-webkit-background-clip: padding-box;
+	
+	border: 0;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	
+	-webkit-perspective: 200;
+}
+
+
+
+input[type="radio"]:before {
+	content: 		attr(data-icon);
+	
+	font: 			22px/22px sans-serif;
+	text-shadow: 	rgba(255,255,255,0.08) 0 -1px 0;
+	line-height: 	40px;
+	
+	text-align: 	center;
+	
+	position: 		absolute;
+	z-index: 		10;
+    
+    width: 			60px;
+	height: 		70px;
+	
+	margin: 4px;
+	border-radius: 3px;	
+	
+    background-image: -webkit-gradient( linear, left top, left bottom,
+		from( 	hsl(0,0%,20%) ), to( hsl(0,0%,15%) )
+	);
+	
+	border-top: 1px solid rgba(255,255,255,0.15);
+	
+}
+
+
+input[type="radio"]:after {
+	content: "";
+	z-index: 		12;
+	position: 		absolute;
+   
+    margin: 3px;
+	border-radius: 3px;
+	
+	left: 			6px;
+	top: 			62px;
+    width: 			50px;
+	height: 		5px;
+	
+	-webkit-box-shadow: inset rgba(0,0,0,.2) 0 -1px 2px, inset rgba(255,255,255,.1) 0 1px 1px;
+				
+}
+
+
+/* ----------- checked */
+
+
+input[type="radio"]:active, input[type="radio"]:checked {
+	-webkit-box-shadow: inset #000 4px 0px 4px, inset #000 -4px 0px 4px;
+	background-image: -webkit-gradient(
+		linear, left top, left bottom,
+		color-stop( 0, 		hsl(0,0%,10%) ),
+		color-stop( 0.14, 	hsl(0,0%,30%) ),
+		color-stop( 0.15, 	hsl(0,0%,0%) )
+	);
+		
+}
+
+
+
+input[type="radio"]:active:before, input[type="radio"]:checked:before {
+	background-image: -webkit-gradient( linear, left top, left bottom,
+		from( 	hsl(0,0%,19%) ), to( hsl(0,0%,12%) )
+	);
+	
+	z-index: 		11;
+	
+	border: 0;
+	border-top: 1px solid transparent;
+	-webkit-border-image: -webkit-gradient(linear, 0% 0%, 100% 0%, 
+							color-stop(0,  hsla(200,100%,85%,.05)),
+							color-stop(.5, hsl(200,0%,40%)),
+							color-stop(1,  hsla(200,100%,80%,.05)) 
+							)50% 100%;
+	-webkit-box-shadow: 0px 2px 1px 1px hsl(0,0%,13%);						
+	-webkit-transform: rotateX(-25deg) scaleX(.95) translateY(4px);
+}
+
+input[type="radio"]:checked:before {
+	color: hsl(200,100%,50%);
+	text-shadow: 	rgba(0,0,0,.5) 0 1px 1px, #0589c8 0 0 10px;	
+	-webkit-border-image: -webkit-gradient(linear, 0% 0%, 100% 0%, 
+							color-stop(0,  hsla(200,100%,85%,.05)),
+							color-stop(.5, hsl(200,20%,50%)),
+							color-stop(1,  hsla(200,100%,80%,.05)) 
+							)50% 100%;
+}
+
+input[type="radio"]:active:after, input[type="radio"]:checked:after {
+	top: 59px;
+	-webkit-transform: scale(.9);
+	opacity: .4;
+}
+
+
+/* ----------- hover */
+
+input[type="radio"]:hover {
+	cursor: pointer;
+}
+input[type="radio"]:checked {
+	cursor: default;
+}
+
+input[type="radio"]:hover:before {
+	background-image: -webkit-gradient( linear, left top, left bottom,
+		from( 	hsl(0,0%,19.5%) ), to( hsl(0,0%,14%) )
+	);
+}
+input[type="radio"]:checked:hover:before {
+	background-image: -webkit-gradient( linear, left top, left bottom,
+		from( 	hsl(0,0%,19%) ), to( hsl(0,0%,12%) )
+	);
+}
+
+

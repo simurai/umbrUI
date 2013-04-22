@@ -1,0 +1,65 @@
+
+/* 
+ * umbrUI meter input by @simurai
+ */
+
+
+
+/* -------------- meter -------------- */
+
+meter:nth-child(1) { -webkit-transform: translate(-50px,  50px) rotate(-90deg); }
+meter:nth-child(2) { -webkit-transform: translate( -25px,  25px) rotate(-90deg); }
+meter:nth-child(3) { -webkit-transform: translate(   0px,   0px) rotate(-90deg); }
+meter:nth-child(4) { -webkit-transform: translate(  25px, -25px) rotate(-90deg); }
+meter:nth-child(5) { -webkit-transform: translate( 50px, -50px) rotate(-90deg); }
+
+
+meter {
+	-webkit-appearance: none;
+	position: relative;
+    display: block;
+    margin: 8px auto;
+	width: 100px;
+	height: 17px;
+	border-radius: 5px; 	
+	padding: 4px 5px 4px 5px;
+    box-sizing: border-box;   
+    background: #000;
+	-webkit-box-shadow: -1px 0 0 hsla(0,0%,100%,.08);
+	-webkit-transform-origin: center 8px;																		
+    }
+
+
+meter::-webkit-meter-bar {
+    background-color: hsl(200,10%,14%);
+    background-size: 2px 5px;
+    background-image: 	-webkit-linear-gradient( 0deg,  hsla(0,0%,0%,.4) 1px, hsla(0,0%,0%,0) 1px ),
+    		            -webkit-linear-gradient( 90deg, hsla(0,0%,0%,1) 1px, hsla(0,0%,0%,0) 1px );	
+    }
+
+
+meter::-webkit-meter-optimum-value,
+meter::-webkit-meter-suboptimum-value,
+meter::-webkit-meter-even-less-good-value {
+    background-size: inherit;
+    background-image: 	inherit;
+    -webkit-box-shadow: 0 0 10px 2px hsla(200,100%,50%,.4);
+    -webkit-transition: width 1s cubic-bezier(.20, .10, .20, 1);
+    }
+
+
+/* With these pseudo selectors you could change the colors when changing the value. */
+meter::-webkit-meter-optimum-value           { background-color: hsl(200,100%,50%); }
+meter::-webkit-meter-suboptimum-value        { background-color: hsl(200,100%,50%); }
+meter::-webkit-meter-even-less-good-value    { background-color: hsl(200,100%,50%); }
+
+
+meter:hover::-webkit-meter-optimum-value,
+meter:hover::-webkit-meter-suboptimum-value,
+meter:hover::-webkit-meter-even-less-good-value {
+	/*In the real world, just change the element's value, this is just a hack for this demo.*/
+	width: 100% !important;
+	-webkit-transition: width .3s cubic-bezier(.20, .10, .20, 1);
+    }
+
+

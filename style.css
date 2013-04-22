@@ -1,0 +1,66 @@
+
+/* This is just the basic styling for the whole page. */
+
+/* Global ------------------------------------------------------ */
+
+html {
+	font: 62.5%/1 "Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+	background-color: hsl(200,5%,15%);
+	background-size: 5px 5px;
+	background-image:   -webkit-linear-gradient( 45deg, hsla(0,0%,0%,0) 0px, 
+	                                                    hsla(0,0%,0%,.10) 50%, 
+	                                                    hsla(0,0%,0%,0) 100% );
+    }
+
+body {
+    margin: 0;
+    }
+
+
+
+/* list ------------------------------------------------------ */
+
+ul {
+    list-style: none;
+    padding: 50px 0;
+	margin: 0;
+	font-size: 2em;
+	text-align: center;
+	background-image:   -webkit-linear-gradient( 0deg, 	hsla(0,0%,100%,0) 0px, 
+														hsla(0,0%,100%,.09) 50%,
+														hsla(0,0%,100%,0) 100% );
+	
+    }
+
+ul li {
+	padding: 50px 0;
+    }
+
+
+
+/* Aside ------------------------------------------------------ */
+
+aside {
+    position: fixed;
+    top: 20px;
+    left: 20px;    
+    }
+
+aside button {
+    margin: 0;
+    padding: 10px ;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: hsl(200,100%,60%);
+    background: hsla(0,0%,0%,.12);
+    cursor: pointer;
+    }
+
+aside button:hover {
+    background: hsla(0,0%,0%,.2);
+    }
+
+aside button:active {
+    -webkit-transform: translateY(1px);
+    }

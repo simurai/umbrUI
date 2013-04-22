@@ -5,14 +5,18 @@
 
 <head>
 	<title>umbrUI - appearance:none styling</title>
+	
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="style.css"/>	
-	<link rel="stylesheet" class="umbrui" href="elements/meter.css"/>
-	<link rel="stylesheet" class="umbrui" href="elements/range.css"/>
-	<link rel="stylesheet" class="umbrui" href="elements/checkbox.css"/>
-	<link rel="stylesheet" class="umbrui" href="elements/number.css"/>
-	<link rel="stylesheet" class="umbrui" href="elements/radio.css"/>
-	<link rel="stylesheet" class="umbrui" href="elements/progress.css"/>
+	
+	<link rel="stylesheet" href="style.css">	
+	<link rel="stylesheet" href="footer.css">
+		
+	<link rel="stylesheet" class="umbrui" href="elements/meter.css">
+	<link rel="stylesheet" class="umbrui" href="elements/range.css">
+	<link rel="stylesheet" class="umbrui" href="elements/checkbox.css">
+	<link rel="stylesheet" class="umbrui" href="elements/number.css">
+	<link rel="stylesheet" class="umbrui" href="elements/radio.css">
+	<link rel="stylesheet" class="umbrui" href="elements/progress.css">
 
     <script>
         
@@ -92,7 +96,7 @@
 		
 		
 	
-	
+    <!-- Toggle --------------------------------------- -->
     
     <aside>
         <button onclick="toggleUmbrUI()">Toggle CSS</button>
@@ -100,7 +104,55 @@
 
 
 
-    {% include includes.html %}
+
+
+    <!-- Footer --------------------------------------- -->
+    
+    <div id="footer">
+        
+        <h1>umbrUI - appearance:none styling</h1>
+        <nav class="links">
+            <a href="http://simurai.com/post/1155924231/css3-appearance-none">Info</a>
+            <a href="https://github.com/simurai/umbrUI">Source</a>
+        </nav>
+        
+        <div class="social">
+            
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="simurai" data-count="none">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            
+            <g:plusone size="medium" annotation="none"></g:plusone>            
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+            
+        </div>
+        
+        <nav class="stamp">
+            <div class="ink"></div>
+        </nav>
+        
+    </div>
+    
+    
+    
+    	
+    <!-- Google --------------------------------------- -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-599923-1']);
+      _gaq.push(['_setDomainName', 'simurai.com']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script><!--/ Google -->
 
 </body>
 </html>

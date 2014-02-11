@@ -1,4 +1,3 @@
-
 /* This is just the basic styling for the whole page. */
 
 /* Global ------------------------------------------------------ */
@@ -33,8 +32,10 @@ ul {
     }
 
 ul li {
-	padding: 50px 0;
-    }
+	display: inline-block;
+	margin: 50px;
+	vertical-align: middle;
+ 	}
 
 
 
@@ -55,6 +56,7 @@ aside button {
     color: hsl(200,100%,60%);
     background: hsla(0,0%,0%,.12);
     cursor: pointer;
+    outline: none;
     }
 
 aside button:hover {
